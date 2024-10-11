@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="mortgage-form-con">
+        <section class="form">
+          <form class="mort-form">
+            <header class="header">
+              <h2>mortgage calculator</h2>
+              <button type="reset" class="clearAll-btn">clear all</button>
+            </header>
+            <!-- Single Row -->
+            <div class="form-row">
+              <label for="mort-amount" class="form-label"
+                >mortgage amount</label
+              >
+              <input
+                type="text"
+                id="mort-amount"
+                class="form-input amt-input"
+                placeholder="Ex. 1000"
+              />
+              <p class="icon amt">£</p>
+              <span class="error-text"></span>
+            </div>
+            <!-- End of Single Row -->
+            <div class="term-rate-con">
+              <!-- Single Row -->
+              <div class="form-row">
+                <label for="mort-term" class="form-label">mortgage term</label>
+                <input
+                  type="text"
+                  id="mort-term"
+                  class="form-input term-input"
+                  placeholder="Ex. 10"
+                />
+                <p class="icon term">years</p>
+                <span class="error-text"></span>
+              </div>
+              <!-- End of Single Row -->
+              <!-- Single Row -->
+              <div class="form-row">
+                <label for="mort-interest" class="form-label"
+                  >interest rate</label
+                >
+                <input
+                  type="text"
+                  id="mort-interest"
+                  class="form-input interest-input"
+                  placeholder="Ex. 1"
+                />
+                <p class="icon type">%</p>
+                <span class="error-text"></span>
+              </div>
+              <!-- End of Single Row -->
+            </div>
+            <!-- Radio Buttons -->
+            <div class="radio-container">
+              <p class="row-title">mortgage type</p>
+              <div class="form-row">
+                <div class="rad-control">
+                  <input
+                    type="radio"
+                    id="repayment"
+                    class="radio-input"
+                    name="mortgage-type"
+                    value="repayment"
+                  />
+                  <label for="repayment" class="form-label radio-label"
+                    >repayment</label
+                  >
+                </div>
+                <div class="rad-control">
+                  <input
+                    type="radio"
+                    id="interest"
+                    class="radio-input"
+                    name="mortgage-type"
+                    value="interest"
+                  />
+                  <label for="interest" class="form-label radio-label"
+                    >interest</label
+                  >
+                </div>
+              </div>
+              <span class="error-text">This field is required</span>
+            </div>
+            <button type="submit" class="submit-btn">
+              <img
+                src="./assets/images/icon-calculator.svg"
+                alt=""
+                class="icon-img"
+              />
+              calculate repayment
+            </button>
+          </form>
+        </section>
+
+        <!-- Results -->
+        <section class="form-results">
+          <!-- Empty Results -->
+          <div class="empty-result">
+            <img
+              src="./assets/images/illustration-empty.svg"
+              alt=""
+              class="empty-img"
+            />
+            <h2>results shown here</h2>
+            <p>
+              Complete the form and click “calculate repayments” to see what
+              your monthly repayments would be.
+            </p>
+          </div>
+          <!-- end of Empty Results -->
+          <!-- Form Result -->
+          <div class="form-result">
+            <h2>Your results</h2>
+            <p>
+              Your results are shown below based on the information you
+              provided. To adjust the results, edit the form and click
+              “calculate repayments” again.
+            </p>
+            <div class="result-container">
+              <p>Your monthly repayments</p>
+              <span class="monthly-repayment">£10</span>
+              <p>Total you'll repay over the term</p>
+              <span class="term-repayment">£10</span>
+            </div>
+          </div>
+          <!-- end of Form Result -->
+        </section>
+      </div>
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="footer">
+      <h4>
+        mortgage repayment calculator
+        <a
+          href="https://www.frontendmentor.io/"
+          class="footer-link"
+          target="_blank"
+        >
+          frontend mentor
+        </a>
+      </h4>
+      <h4>
+        built by
+        <a
+          href="https://github.com/Mike-Kay"
+          class="footer-link"
+          target="_blank"
+        >
+          <span>&diamond;</span> mike-kay
+        </a>
+      </h4>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
