@@ -265,9 +265,12 @@ input[type="radio"]:checked + label::before {
   outline: 1.5px solid var(--clr-Lime);
   background: var(--clr-Lime);
 }
+.radio-container .form-row {
+  margin-bottom: 0;
+}
 .radio-container .error-text {
   display: block;
-  margin-top: -0.5rem;
+  margin-top: -0.3rem;
 }
 .submit-btn {
   width: 100%;
@@ -283,6 +286,7 @@ input[type="radio"]:checked + label::before {
   border-radius: 30px;
   padding: 1rem 0;
   letter-spacing: 0.3px;
+  margin-top: 2rem;
   transition: var(--transition);
 }
 .submit-btn:hover {
