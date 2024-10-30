@@ -34,7 +34,6 @@ form.addEventListener("submit", (evt) => {
     const value = input.value;
     let checkValue = value / 1;
     checkValue = Number.isNaN(checkValue, NaN);
-    console.log(checkValue);
     if (!value) {
       input.parentElement.classList.add("show-input-error");
       input.nextElementSibling.nextElementSibling.textContent =
@@ -82,9 +81,15 @@ const calculateMortgage = (amount, term, interest, type) => {
     termPayment = interestTotal;
     monthlyPayment = interestPerMonth;
   }
+
   formResults.classList.add("show");
-  monthlyRepayment.textContent = `£${monthlyPayment.toFixed(2)}`;
-  termRepayment.textContent = `£${termPayment.toFixed(2)}`;
+  monthlyRepayment.textContent = `£${formatResult(monthlyPayment)}`;
+  termRepayment.textContent = `£${formatResult(termPayment)}`;
+};
+
+const formatResult = (price) => {
+  let formattedResult = Intl.NumberFormat().format(price.toFixed(2));
+  return formattedResult;
 };
 
 clearAllBtn.addEventListener("click", () => {
