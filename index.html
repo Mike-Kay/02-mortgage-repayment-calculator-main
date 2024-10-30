@@ -21,7 +21,7 @@
         <section class="form">
           <form class="mort-form">
             <header class="header">
-              <h2>mortgage calculator</h2>
+              <h1>mortgage calculator</h1>
               <button type="reset" class="clearAll-btn">clear all</button>
             </header>
             <!-- Single Row -->
@@ -31,6 +31,7 @@
               >
               <input
                 type="text"
+                inputmode="numeric"
                 id="mort-amount"
                 class="form-input amt-input"
                 placeholder="Ex. 1000"
@@ -45,6 +46,7 @@
                 <label for="mort-term" class="form-label">mortgage term</label>
                 <input
                   type="text"
+                  inputmode="numeric"
                   id="mort-term"
                   class="form-input term-input"
                   placeholder="Ex. 10"
@@ -60,6 +62,7 @@
                 >
                 <input
                   type="text"
+                  inputmode="numeric"
                   id="mort-interest"
                   class="form-input interest-input"
                   placeholder="Ex. 1"
@@ -149,26 +152,19 @@
 
     <!-- Page Footer -->
     <footer class="footer">
-      <h4>
-        mortgage repayment calculator
-        <a
-          href="https://www.frontendmentor.io/"
-          class="footer-link"
-          target="_blank"
-        >
-          frontend mentor
-        </a>
-      </h4>
-      <h4>
-        built by
-        <a
-          href="https://github.com/Mike-Kay"
-          class="footer-link"
-          target="_blank"
-        >
-          <span>&diamond;</span> mike-kay
-        </a>
-      </h4>
+      mortgage repayment calculator
+      <a
+        href="https://www.frontendmentor.io/"
+        class="footer-link"
+        target="_blank"
+      >
+        frontend mentor
+      </a>
+      <br />
+      built by
+      <a href="https://github.com/Mike-Kay" class="footer-link" target="_blank">
+        <span>&diamond;</span> mike-kay
+      </a>
     </footer>
     <script src="app.js"></script>
   </body>
